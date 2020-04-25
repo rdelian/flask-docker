@@ -12,7 +12,7 @@ You have to configure your project `docker-compose.yml` and your own domain (if 
 - `MYSQL_ROOT_PASSWORD` & `MYSQL_DATABASE` database login info (_edit the ones from `platform_db` service as well_)
 - `FLASK_ENV` has 2 modes **produciton** and **development**
     - `production` runs flask app with apache2
-    - `development` runds flask in development mode
+    - `development` runs flask in development mode
 
 
 ## Build
