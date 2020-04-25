@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  platform:
+    build: platform
+    links:
+      - platform_db
+    volumes:
+      - ./platform/src:/platform/src
+    environment:
+      MYSQL_HOSTNAME: platform_db
+      MYSQL_ROOT_PASSWORD: PDBPass2020
+      MYSQL_DATABASE: platform_db
+      FLASK_ENV: development
+      FLASK_SECRET_KEY: PSKPass2020
+      FLASK_APP: /platform/src/run.py
+
+    command: /platform/wait-for platform_db:3306 -- sh /platform/init.sh
+    ports:
+    - 5000:80
+  platform_db:
+    image: mysql:5.7.22
+    ports:
+    - 5001:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: PDBPass2020
+      MYSQL_DATABASE: platform_db
