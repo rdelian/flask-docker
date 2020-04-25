@@ -8,7 +8,7 @@ The project comes with SSL support ready, login/register and SqlAlchemy
 First you will need `platform_base_img` from [here]() to be able to build the project \
 You have to configure your project `docker-compose.yml` and your own domain (if any) in `./init/platform.conf` 
 
-##Config
+## Config
 - `MYSQL_ROOT_PASSWORD` & `MYSQL_DATABASE` database login info (_edit the ones from `platform_db` service as well_)
 - `FLASK_ENV` has 2 modes **produciton** and **development**
     - `production` runs flask app with apache2
