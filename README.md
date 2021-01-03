@@ -2,7 +2,7 @@
 
 ## Info
 Python 3.5 flask app template using docker.\
-The project comes with SSL support ready, login/register and SqlAlchemy
+- The project comes with SSL support ready, login/register and SqlAlchemy
 
 ## Pre-build
 First you will need `platform_base_img` from [here](https://github.com/rdelian/platform-base-image) to be able to build the project \
